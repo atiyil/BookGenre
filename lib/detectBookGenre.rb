@@ -2,12 +2,20 @@ require './detectBookGenre/book'
 require 'json'
 require 'csv'
 
-# parse the json file to get books' data
-file = File.read(ARGV[0])
+# read and parse the json file to get books' data
+begin
+file = File.read('../data/'.concat(ARGV[0]))
+rescue Exception => e
+  abort e.message
+end
 books = JSON.parse file
 
 # get genre names, keywords and corresponding points
-genreData = CSV.read(ARGV[1])
+begin
+genreData = CSV.read('../data/'.concat(ARGV[1]))
+rescue Exception => e
+  abort e.message
+end
 
 # get rid of first line which is title
 genreData.shift
