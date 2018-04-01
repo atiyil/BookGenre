@@ -27,7 +27,7 @@ based on the presence of certain genre-specific keywords.
 
 ## TO-DO List
 * Handle proper handling of file read exception
-* Add path finder for data files under folder /data
+* Handle path for data files under folder /data
 * Add alphabetic sort for books
 * Add more comments
 * Add tests to improve code quality and maintainability
