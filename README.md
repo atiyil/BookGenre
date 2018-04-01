@@ -1,4 +1,3 @@
-<Any steps necessary to run your program>
 # Auto-detect Book Genres
 
 This is a tool to help BookBub’s editorial team quickly go through a list
@@ -19,21 +18,15 @@ based on the presence of certain genre-specific keywords.
 * Add any test files into 'test' folder
 
 ## Application Start
-* ruby detectBookGenre.rb jsonfile csvfile
+* ruby detectBookGenre.rb path-to-jsonfile path-to-csvfile
 
 ## Documentation
 * Update this document when needed
 * Add links to the any app related documentation here
 
-<Any interesting trade-offs or edge cases you ran into>
-- calculating score using average points was tricky compared to
-  calculating by total points by each keyword
-- instead of looping by genre and then by keywords, I used csv lines to
-  prevent duplication
-- I had to use an array to choose top 3 genres out of a hash
-- I would add alphabetic sort for books and more comments if I had more time
-- I would add tests to improve code quality and maintainability
-- I would define a module to include all classes under detectBookGenre
-
-<Approximately how long you spent>
-3 hours
+## TO-DO List
+- Add path finder for data files under folder /data
+- Add alphabetic sort for books
++ Add more comments
+- Add tests to improve code quality and maintainability
+- Define a module to include all classes under detectBookGenre
