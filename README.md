@@ -26,8 +26,6 @@ based on the presence of certain genre-specific keywords.
 * Add links to the any app related documentation here
 
 ## TO-DO List
-* Handle proper handling of file read exception
-* Handle path for data files under folder /data
 * Add alphabetic sort for books
 * Add more comments
 * Add tests to improve code quality and maintainability
