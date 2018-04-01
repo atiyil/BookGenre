@@ -26,7 +26,5 @@ based on the presence of certain genre-specific keywords.
 * Add links to the any app related documentation here
 
 ## TO-DO List
-* Add alphabetic sort for books
-* Add more comments
 * Add tests to improve code quality and maintainability
 * Define a module to include all classes under detectBookGenre
