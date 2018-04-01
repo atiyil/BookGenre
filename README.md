@@ -18,6 +18,7 @@ based on the presence of certain genre-specific keywords.
 * Add any test files into 'test' folder
 
 ## Application Start
+* Go to the 'lib' folder
 * ruby detectBookGenre.rb path-to-jsonfile path-to-csvfile
 
 ## Documentation
@@ -25,8 +26,9 @@ based on the presence of certain genre-specific keywords.
 * Add links to the any app related documentation here
 
 ## TO-DO List
-- Add path finder for data files under folder /data
-- Add alphabetic sort for books
-+ Add more comments
-- Add tests to improve code quality and maintainability
-- Define a module to include all classes under detectBookGenre
+* Handle proper handling of file read exception
+* Add path finder for data files under folder /data
+* Add alphabetic sort for books
+* Add more comments
+* Add tests to improve code quality and maintainability
+* Define a module to include all classes under detectBookGenre
