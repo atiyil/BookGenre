@@ -23,7 +23,10 @@ genreData.shift
 # get unique genre names
 genres = genreData.transpose[0].uniq
 
-books.each {|the| # compute genre scores for each book
+# sort books alphabetically
+sortedBooks = books.sort_by {|x| x['title']}
+
+sortedBooks.each {|the| # compute genre scores for each book
   puts
   book = Book.new(the['title'],the['description'])
   puts book.title
@@ -34,21 +37,23 @@ books.each {|the| # compute genre scores for each book
   genreData.each {|column| # traverse each line of CSV for calculations
     numOfMatches = book.description.scan(column[1]).count
     if numOfMatches > 0 then # if there is a keyword match
-      points[column[0]] += column[2].to_i
-      counter[column[0]] += numOfMatches
-      unique[column[0]] += 1
+      points[column[0]] += column[2].to_i # update points
+      counter[column[0]] += numOfMatches # update total keywords found
+      unique[column[0]] += 1 # update unique keywords found
     end
   }
   genres.each {|genre|
     if unique[genre] > 0 then # compute scores for each found genre
       score[genre] = counter[genre] * points[genre] / unique[genre]
     end}
+
   sortedScores = score.sort_by {|k,v| -v}.to_h # sort scores descending
 
-  if sortedScores.length > 3 then
-    first3 = sortedScores.to_a.slice(0..2)
+  if sortedScores.length > 3 then # if more than 3 genres exist
+    first3 = sortedScores.to_a.slice(0..2) # take highest 3 genre
     first3.each {|x| print x[0],', ',x[1];puts}
   else
     sortedScores.each {|k,v| print k,', ',v;puts}
   end
 }
+puts
