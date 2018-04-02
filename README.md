@@ -1,5 +1,4 @@
 # Auto-detect Book Genres
-
 This is a tool to help BookBub’s editorial team quickly go through a list
 of books and identify the correct genre for each book. The approach we’re
 taking is to analyze the description of each book and calculate a score
@@ -20,6 +19,10 @@ based on the presence of certain genre-specific keywords.
 ## Application Start
 * Go to the 'lib' folder
 * ruby detectBookGenre.rb path-to-jsonfile path-to-csvfile
+
+## Running tests
+* Go to the 'test' folder
+* ruby path-to-testfile
 
 ## Documentation
 * Update this document when needed
